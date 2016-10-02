@@ -48,25 +48,80 @@
   </tr>
   <tr>
     <td> Trigger: </td>
-    <td> 
-      1. The user has an interview with the employer and would like to find the location without typing in the address.
-      The information would already be saved in the contact database.  
-      2. The user could be traveling to a new city and would like to meet up with old professional contacts nearby.
+    <td> <ol>
+      <li> The user has an interview with the employer and would like to find the location without typing in the address.
+      The information would already be saved in the contact database.  </li>
+      <li> The user could be traveling to a new city and would like to meet up with old professional contacts nearby.</li> </ol>
      </td>
   </tr>
   <tr>
    <td> Preconditions: </td>
-   <td> 1. In order for this use case to execute, we need the contacts' information saved in the database.  
-        2. User authentication must be working properly to ensure the user's contacts to display in maps.  
-        3. The user must be in a location where the GPS is working.
+   <td> <ol><li> In order for this use case to execute, we need the contacts' information saved in the database.  </li>
+        <li> User authentication must be working properly to ensure the user's contacts to display in maps. </li> 
+        <li> The user must be in a location where the GPS is working.</li></ol>
    </td>
   </tr>
   <tr>
    <td> Postconditions: </td>
-   <td> 1. To keep track of when you last visited this contact, when the user plans to visit, the last visited database needs to be updated.  
-        2. After the visit, the timer will be set for notifying the user to ensure follow up (ex. Thank you letter). 
+   <td> <ol><li> To keep track of when you last visited this contact, when the user plans to visit, the last visited database needs to be updated.  </li>
+        <li> After the visit, the timer will be set for notifying the user to ensure follow up (ex. Thank you letter). </li></ol>
+   </td>
+  </tr>
+  <tr>
+    <td> Normal Flow: </td>
+    <td> 1.0. User has meeting, </td>
+  </tr>
+  <tr>  
+   <td> Alternative Flows: </td>
+   <td> </td>
+  <tr>
+  <tr>  
+   <td> Exceptions: </td>
+   <td> </td>
+  </tr>
+  <tr>  
+   <td> Includes: </td>
+   <td> <ol><li> Store name card information. </li>
+     <li> Search for contact </li>
+     <li> Confirm Completion </li>
+     </ol>
+   </td>
+  </tr>
+  <tr>  
+   <td> Priority: </td>
+   <td> High </td>
+  </tr>
+  <tr>  
+   <td> Frequency of Use: </td>
+   <td> If all of BU is in our user pool, then we estimate about 3 or 4 people would utilize this use case per hour. This average is limited to working hours (Monday-Friday: 9am - 7pm). </td>
+  </tr>
+  <tr>  
+   <td> Business Rules: </td>
+   <td> Privacy Etiquette</td>
+  </tr>
+  <tr>  
+   <td> Special Requirements: </td>
+   <td> <ul><li> Card Scanner API must be functional with little error. </li>
+    <li> Due to card scanner and using Google API, we expect the user to have good battery life. </li></ul>
+   </td>
+  </tr>
+  <tr>  
+   <td> Assumptions: </td>
+   <td> We assume that the user places high importance on their schedule, but has poor sense of direction. We are also assuming that the user is highly efficient with their time. </td>
+  </tr>
+  <tr>  
+   <td> Notes and Issues: </td>
+   <td> <ul><li> Figure out how to implement the card scanner API: Jesus and Yifan: DUE DATE? </li>
+   <li> Create accounts for each user: Jesus, Lai Wei, Yifan, Satoe: DUE DATE? </li>
+   <li> Clarify Alt flow, Priority, and Normal Flow: Satoe: October 4th, 2016 </li>
+   </ul>
    </td>
   </tr>
  </table>
   
-    
+## Revision History
+
+| Name                         | Date          | Reason for Changes       |Version|
+| ---------------------------- |:-------------:|:------------------------:|:------|
+| Jesus, Lai Wei, Yifan, Satoe |October 2, 2016| Date Created             | 1     |
+ 
