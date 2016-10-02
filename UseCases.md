@@ -5,11 +5,13 @@
 
 ## Use Case List
 
-| ID            | Primary Actor | Use Case Title  |
-| ------------- |:-------------:| ---------------:|
-|               |               |                 |
-|               |               |                 |
-|               |               |                 |
+| ID            | Primary Actor | Use Case Title           |
+| ------------- |:-------------:| ------------------------:|
+| 1             | User          | Search for Contact       |
+| 2             | User          | Store Name Card Info     |
+| 3             | User          | Send Notification        |
+| 4             | User          | Locate Contacts on Map   |
+| 5             | User          | Authenticate User        |
 
 
 ## Use Case Template
