@@ -13,6 +13,19 @@
 | 4             | User          | Locate Contacts on Map   |
 | 5             | User          | Authenticate User        |
 
+## Use Case Paragraphs
+
+#### 1: Lai Wei
+
+#### 2: Jesus
+
+#### 3: Satoe
+Send notification is a function to remind users to reach out their contacts on set time, birthday, or a few days after a meeting. This is built in to take the hassle away from the user to remember to write thank you cards or birthday cards to their professional contacts that they would like to maintain in their network. We are thinking about providing templates for users to choose from, so that we can maximize convenience for our users. By keeping track of the last time of communication, we will provide users with the option of how frequently they would like to reach out. This way, we can remind our users to reach out in a timely fashion that keeps a tight network with maximum efficiency.
+
+#### 4: Yifan
+
+#### 5: Lai Wei
+
 
 ## Use Case Template
 <table>
@@ -124,4 +137,5 @@
 | Name                         | Date          | Reason for Changes       |Version|
 | ---------------------------- |:-------------:|:------------------------:|:------|
 | Jesus, Lai Wei, Yifan, Satoe |October 2, 2016| Date Created             | 1     |
+| Satoe                        |October 3, 2016| Edited Paragraph         | 2     |
  
