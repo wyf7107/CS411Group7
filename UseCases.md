@@ -45,7 +45,7 @@ Send notification is a function to remind users to reach out their contacts on s
   <tr>
    <td> Date Created: </td>
    <td> October 2, 2016 </td>
-   <td> Date Last Updated: </td>
+   <td> Date Last Updated: October 4, 2016</td>
   </tr>
 </table>   
 
@@ -82,7 +82,13 @@ Send notification is a function to remind users to reach out their contacts on s
   </tr>
   <tr>
     <td> Normal Flow: </td>
-    <td> 1.0. User has meeting, </td>
+    <td> 4.0. User has meeting 
+    4.1. Clicks on map
+    4.2. Map locates destination
+    4.3. Displays route, time, and contact person
+    4.4. Confirms transportation method
+    4.5. Updates last visited database
+    4.6. Sets timer for notification </td>
   </tr>
   <tr>  
    <td> Alternative Flows: </td>
