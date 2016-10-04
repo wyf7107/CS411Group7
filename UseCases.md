@@ -82,21 +82,24 @@ Send notification is a function to remind users to reach out their contacts on s
   </tr>
   <tr>
     <td> Normal Flow: </td>
-    <td> 4.0. User has meeting 
-    4.1. Clicks on map
-    4.2. Map locates destination
-    4.3. Displays route, time, and contact person
-    4.4. Confirms transportation method
-    4.5. Updates last visited database
+    <td> 4.0. User has meeting and selects contact they have to meet with <br>
+    4.1. Clicks on map <br>
+    4.2. Map locates destination <br>
+    4.3. Displays route, time, and contact person <br>
+    4.4. Confirms transportation method <br>
+    4.5. Updates last visited database <br>
     4.6. Sets timer for notification </td>
   </tr>
   <tr>  
    <td> Alternative Flows: </td>
-   <td> </td>
+   <td> 4.0. User goes straight to map without selecting contact. System will respond with all contacts near the user. </td>
   <tr>
   <tr>  
    <td> Exceptions: </td>
-   <td> </td>
+   <td> 4.2 E.0 The user does not have contact address. User will be given an option to call the contact. <br>
+        4.3 E.0. User does not have access to GPS. System will just show destination without the route to the location.<br>
+        4.5 E.0. Meeting gets canceled. System will have to ask if the meeting was completed before 4.5 in flow. 
+        </td>
   </tr>
   <tr>  
    <td> Includes: </td>
@@ -140,8 +143,9 @@ Send notification is a function to remind users to reach out their contacts on s
   
 ## Revision History
 
-| Name                         | Date          | Reason for Changes       |Version|
-| ---------------------------- |:-------------:|:------------------------:|:------|
-| Jesus, Lai Wei, Yifan, Satoe |October 2, 2016| Date Created             | 1     |
-| Satoe                        |October 3, 2016| Edited Paragraph         | 2     |
+| Name                         | Date          | Reason for Changes         |Version|
+| ---------------------------- |:-------------:|:--------------------------:|:------|
+| Jesus, Lai Wei, Yifan, Satoe |October 2, 2016| Date Created               | 1     |
+| Satoe                        |October 3, 2016| Edited Paragraph           | 2     |
+| Satoe                        |October 4, 2016| Edited Flows and Exception | 3     |
  
