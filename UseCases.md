@@ -27,6 +27,8 @@ Send notification is a function to remind users to reach out their contacts on s
 Location Service is an essential part of our application. Users will not only be able to search for others users, store information, get notifications, but also locate their professional contacts in a real-time map. This function will be very useful when the user wants to get a sense about how far he or she is away from his or her target contact people. Moreover, a ‘nearby me’ feature is set up for the benefit of the users to locate contacts near their current geographic locations so that it gets more easier to find people and get in touch with them.
 
 #### 5: Lai Wei
+Authenticate User is a function that helps user to create an account on our web application. When the user first visit our website, they will need to create a new account name with a password. After this process, users can start to store the contacts they want under their accounts. This function is necessary because users will have different personal contacts and that is a good way to store users’ own personal contacts.
+
 
 
 ## Use Case Template
