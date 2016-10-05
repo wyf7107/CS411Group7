@@ -23,6 +23,7 @@
 Send notification is a function to remind users to reach out their contacts on set time, birthday, or a few days after a meeting. This is built in to take the hassle away from the user to remember to write thank you cards or birthday cards to their professional contacts that they would like to maintain in their network. We are thinking about providing templates for users to choose from, so that we can maximize convenience for our users. By keeping track of the last time of communication, we will provide users with the option of how frequently they would like to reach out. This way, we can remind our users to reach out in a timely fashion that keeps a tight network with maximum efficiency.
 
 #### 4: Yifan
+Location Service is an essential part of our application. Users will not only be able to search for others users, store information, get notifications, but also locate their professional contacts in a real-time map. This function will be very useful when the user wants to get a sense about how far he or she is away from his or her target contact people. Moreover, a ‘nearby me’ feature is set up for the benefit of the users to locate contacts near their current geographic locations so that it gets more easier to find people and get in touch with them.
 
 #### 5: Lai Wei
 
@@ -149,4 +150,4 @@ Send notification is a function to remind users to reach out their contacts on s
 | Jesus, Lai Wei, Yifan, Satoe |October 2, 2016| Date Created               | 1     |
 | Satoe                        |October 3, 2016| Edited Paragraph           | 2     |
 | Satoe                        |October 4, 2016| Edited Flows and Exception | 3     |
- 
+| Frank                        |October 4, 2016| Edited Paragraph           | 4     |
