@@ -16,6 +16,7 @@
 ## Use Case Paragraphs
 
 #### 1: Lai Wei
+Search for contact is a function that can allow users to find their desired contacts who are already stored in their contact list. This function  provides a convenient way for users to find the contacts stored in the contact list. Users don’t have to look up the contacts one  by one in their contact list. Instead, they can simply type in the name of the contact desired and the results will be displayed.
 
 #### 2: Jesus
 
