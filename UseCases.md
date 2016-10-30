@@ -32,7 +32,7 @@ Authenticate User is a function that helps user to create an account on our web 
 
 
 
-## Use Case Template
+## Use Case Template CASE 4
 <table>
   <tr>
     <td> Use Case ID:</td>
