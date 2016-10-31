@@ -83,9 +83,8 @@ Authenticate User is a function that helps user to create an account on our web 
   </tr>
   <tr>
    <td> Postconditions: </td>
-   <td> <ol><li> To keep track of when you last visited this contact, when the user plans to visit, the last visited database needs to be updated.  </li>
-        <li> After the visit, the timer will be set for notifying the user to ensure follow up (ex. Thank you letter). </li></ol>
-   </td>
+   <td> <ol><li> To keep track of when you last viewed this contact and update any changes of the contacts  </li> </ol>
+        </td>
   </tr>
   <tr>
     <td> Normal Flow: </td>
@@ -94,7 +93,7 @@ Authenticate User is a function that helps user to create an account on our web 
   </tr>
   <tr>  
    <td> Alternative Flows: </td>
-   <td> 1.0. User goes straight to map without selecting contact. System will respond with all contacts near the user. </td>
+   <td> 1.0. User types in the full name of a user, the contact name will still be displayed </td>
   <tr>
   <tr>  
    <td> Exceptions: </td>
@@ -126,17 +125,18 @@ Authenticate User is a function that helps user to create an account on our web 
   <tr>  
    <td> Special Requirements: </td>
    <td> <ul><li> Card Scanner API must be functional with little error. </li>
-    <li> Due to card scanner and using Google API, we expect the user to have good battery life. </li></ul>
+   <li> Database must be big enough to store the contact information. </li></ul>
    </td>
   </tr>
   <tr>  
    <td> Assumptions: </td>
-   <td> We assume that the user places high importance on their schedule, but has poor sense of direction. We are also assuming that the user is highly efficient with their time. </td>
+   <td> We assume that the user cannot remember all the contact information. We also assume that they use our applications to store their contacts. </td>
   </tr>
   <tr>  
    <td> Notes and Issues: </td>
    <td> <ul><li> Figure out how to implement the card scanner API: Jesus and Yifan: DUE DATE? </li>
    <li> Create accounts for each user: Jesus, Lai Wei, Yifan, Satoe: DUE DATE? </li>
+   <li> Figrue out which database to use </li>
    <li> Clarify Alt flow, Priority, and Normal Flow: Satoe: October 4th, 2016 </li>
    </ul>
    </td>
