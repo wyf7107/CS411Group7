@@ -78,7 +78,7 @@ Authenticate User is a function that helps user to create an account on our web 
    <td> Preconditions: </td>
    <td> <ol><li> In order for this use case to execute, we need the contacts' information saved in the database.  </li>
         <li> User authentication must be working properly to ensure the user's contacts to display in maps. </li> 
-        <li> The user must be in a location where the GPS is working.</li></ol>
+        <li> The user must be in a location that they can have an access on internet.</li></ol>
    </td>
   </tr>
   <tr>
@@ -134,11 +134,8 @@ Authenticate User is a function that helps user to create an account on our web 
   </tr>
   <tr>  
    <td> Notes and Issues: </td>
-   <td> <ul><li> Figure out how to implement the card scanner API: Jesus and Yifan: DUE DATE? </li>
-   <li> Create accounts for each user: Jesus, Lai Wei, Yifan, Satoe: DUE DATE? </li>
-   <li> Figrue out which database to use </li>
-   <li> Clarify Alt flow, Priority, and Normal Flow: Satoe: October 4th, 2016 </li>
-   </ul>
+   <td> <ul><li> Figure out which database to use </li>
+ </ul>
    </td>
   </tr>
  </table>
