@@ -158,7 +158,7 @@ Authenticate User is a function that helps user to create an account on our web 
    <td> Date Created: </td>
    <td> October 31, 2016 </td>
    <td> Date Last Updated: </td>
-   <td> October 31, 2016</td>
+   <td> November 1, 2016</td>
   </tr>
 </table>   
 
@@ -619,5 +619,6 @@ Authenticate User is a function that helps user to create an account on our web 
 | Jesus, Lai Wei, Yifan, Satoe |October 2, 2016 | Date Created               | 1     |
 | Satoe                        |October 3, 2016 | Edited Paragraph           | 2     |
 | Satoe                        |October 4, 2016 | Edited Flows and Exception | 3     |
-| Frank                        |October 4, 2016 | Edited Paragraph           | 4     |
+| Franco                       |October 4, 2016 | Edited Paragraph           | 4     |
 | Satoe                        |October 30, 2016| Added Use Case 2,3,5       | 5     |
+| Jesus F.                     |November 1, 2016| Modified Case 2            | 6     |
