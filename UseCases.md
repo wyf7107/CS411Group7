@@ -174,37 +174,58 @@ Authenticate User is a function that helps user to create an account on our web 
   <tr>
     <td> Trigger: </td>
     <td> <ol>
-      <li> The user meets someone new and would like to keep them as a professional contact but not crowd up their default contact list.  </li>
+      <li> 1. The user meets someone new and would like to keep them as a professional contact but not crowd up their default contact list.
+      </li>
+          <li> 2. The user gets a business card from an important person/ potential interviewer and would like to save it in an effective manner and in a safe place before it gets lost.
+      </li>
      </ol>
      </td>
   </tr>
   <tr>
    <td> Preconditions: </td>
-   <td> <ol><li> In order for this use case to execute, we need the user to have access to the information of the contact. </li>
-        <li> The camera on the phone is functioning. </li> 
+   <td> <ol><li> In order for this use case to execute, we need the user to have access to the information of the contact on a business card. If they do not have the business card, they may enter the information manualy. </li>
+        <li> In order for this case to execute, the user must have a functional camera in their phone. 
+ </li>
+ <li>
+  Again the authentication must be working properly so that only the users saved contacts are saved into the database. 
+
+ </li>
         </ol>
    </td>
   </tr>
   <tr>
    <td> Postconditions: </td>
-   <td> <ol><li> Add to the list of previous contacts in the list that users can scroll through. </li> </ol>
+   <td> <ol><li> Add to the list of previous contacts in the list that users can scroll through. </li> 
+   <li>
+   Keeps an electronic Version of the business card.
+   </li>
+   </ol>
         </td>
   </tr>
   <tr>
     <td> Normal Flow: </td>
     <td> 2.0. User has met someone new and has gotten a business card. <br>
-         2.1. User will either take a picture of business card. <br>
-         2.2 Contact name will appear on the list with option to see more of their info.</td>
+         2.1 Clicks on the camera command button. <br>
+         2.2 Camera with the scanner scans the card. <br>
+         2.3 Finds the address, phone number, name, and email address. <br>
+         2.4 program displays the info it will save <br>
+         2.5 The user makes any necessary changes and confirms the data <br>
+         2.6 Updates the database with the new info <br>
+         </td>
   </tr>
   <tr>  
    <td> Alternative Flows: </td>
-   <td> 2.0. User can input information manually.</td>
+   <td> 2.0. User can input information manually. <br>
+        2.1 Click the choice to manually enter such information. <br>
+        2.2 Database is updated based on information. <br>
+   </td>
   <tr>
   <tr>  
    <td> Exceptions: </td>
    <td> 2.1 E.0. Contact did not get business card, but would like to still save their information by asking the contact to fill in the needed information. System has option to input manually.  <br>
         2.1 E.1. User's camera is not working. System will ask to manually insert. <br>
-     
+        2.1 E.2 The Camera scanner cannot find the information on the card. The user is given the option to add the information themselves manually or to try again. <br>
+
      </td>
   </tr>
   <tr>  
@@ -221,7 +242,9 @@ Authenticate User is a function that helps user to create an account on our web 
   </tr>
   <tr>  
    <td> Frequency of Use: </td>
-   <td> 10 actions per user per hour at a career fair or networking event. </td>
+   <td> 10 actions per user per hour at a career fair or networking event. Career fair should not last more than 3-5 hours. <br>
+       Or 1 -5 times a week after a special meeting. <br>
+   </td>
   </tr>
   <tr>  
    <td> Business Rules: </td>
@@ -230,6 +253,7 @@ Authenticate User is a function that helps user to create an account on our web 
   <tr>  
    <td> Special Requirements: </td>
    <td> <ul><li> Card Scanner API must be functional with little error. </li>
+   <li> The Card Scanner API must be able to identify the different information given in the card. 
    <li> Database must be big enough to store the contact information. </li></ul>
    </td>
   </tr>
