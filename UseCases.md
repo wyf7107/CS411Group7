@@ -407,7 +407,7 @@ Authenticate User is a function that helps user to create an account on our web 
     <td> Created By: </td>
     <td> Jesus Franco, Lai Wei, Yifan Wang, Satoe Sakuma </td>
     <td> Last Updated By: </td>
-    <td> Satoe Sakuma </td>
+    <td> Satoe Sakuma, Jesus Franco </td>
   </tr>
   <tr>
    <td> Date Created: </td>
