@@ -105,7 +105,6 @@ Authenticate User is a function that helps user to create an account on our web 
   <tr>  
    <td> Includes: </td>
    <td> <ol><li> Authenticate User </li>
-     <li>  </li>
      <li> Confirm Completion </li>
      </ol>
    </td>
@@ -222,7 +221,7 @@ Authenticate User is a function that helps user to create an account on our web 
   </tr>
   <tr>  
    <td> Frequency of Use: </td>
-   <td> 10 actions per user per hour at a career fair or networking event. /td>
+   <td> 10 actions per user per hour at a career fair or networking event. </td>
   </tr>
   <tr>  
    <td> Business Rules: </td>
@@ -486,6 +485,109 @@ Authenticate User is a function that helps user to create an account on our web 
   </tr>
  </table>
   
+  
+  <table>
+  <tr>
+    <td> Use Case ID:</td>
+    <td colspan ="3"> 5 </td>
+  </tr>
+  <tr>
+    <td> Use Case Name: </td>
+    <td colspan ="3"> Authenticate User</td>
+  <tr>
+    <td> Created By: </td>
+    <td> Jesus Franco, Lai Wei, Yifan Wang, Satoe Sakuma </td>
+    <td> Last Updated By: </td>
+    <td> Satoe Sakuma </td>
+  </tr>
+  <tr>
+   <td> Date Created: </td>
+   <td> October 31, 2016 </td>
+   <td> Date Last Updated: </td>
+   <td> October 31, 2016</td>
+  </tr>
+</table>   
+
+<table> 
+  <tr> 
+   <td> Actors: </td>
+   <td> Ambitious Job Seeker (User) </td>
+  </tr>
+  <tr>
+    <td> Description: </td>
+    <td> Due to storing contact information being personal information, we are looking for ways to make sure to authenticate the user so that random people will not be able to access contacts' information.. </td>
+  </tr>
+  <tr>
+    <td> Trigger: </td>
+    <td> <ol>
+      <li> The user would like to use the application and get access to the stored contacts. </li>
+      </ol>
+     </td>
+  </tr>
+  <tr>
+   <td> Preconditions: </td>
+   <td> <ol><li> User knows his/her usernmae and password.  </li>
+  </ol>
+   </td>
+  </tr>
+  <tr>
+   <td> Postconditions: </td>
+   <td> <ol><li> Keep a log file of when user had successful and unsuccessful login attempts. </li> </ol>
+        </td>
+  </tr>
+  <tr>
+    <td> Normal Flow: </td>
+    <td> 5.0. User wants to get access to their contacts <br>
+         5.1. User types in credentials for their account <br>
+         5.2. System displays contacts </td>
+  </tr>
+  <tr>  
+   <td> Alternative Flows: </td>
+   <td> 5.0. User did not close the application, which would not require an additional log in. </td>
+  <tr>
+  <tr>  
+   <td> Exceptions: </td>
+   <td> 5.1 E.0. User forgets credentials. System will have a forgot username/password link. <br>
+        5.1 E.1. User inputs the wrong credentials. Deny access.<br>
+     
+     </td>
+  </tr>
+  <tr>  
+   <td> Includes: </td>
+   <td> <ol><li> Store name card information. </li>
+     </ol>
+   </td>
+  </tr>
+  <tr>  
+   <td> Priority: </td>
+   <td> High </td>
+  </tr>
+  <tr>  
+   <td> Frequency of Use: </td>
+   <td> For all the other use cases, user must first authenticate, which means the frequency is the sum of all other use cases. This would look something like standard usage with spikes of usage during networking events. </td>
+  </tr>
+  <tr>  
+   <td> Business Rules: </td>
+   <td> Privacy Etiquette</td>
+  </tr>
+  <tr>  
+   <td> Special Requirements: </td>
+   <td> <ul><li> Database is robust and does not allow injections </li>
+  </ul>
+   </td>
+  </tr>
+  <tr>  
+   <td> Assumptions: </td>
+   <td> We assume that the user will remember their credentials and will not maliciously attack the login page. </td>
+  </tr>
+  <tr>  
+   <td> Notes and Issues: </td>
+   <td> <ul><li> Learn how to implement a secure login page. </li>
+ </ul>
+   </td>
+  </tr>
+ </table>
+
 ## Revision History
 
 | Name                         | Date           | Reason for Changes         |Version|
@@ -494,4 +596,4 @@ Authenticate User is a function that helps user to create an account on our web 
 | Satoe                        |October 3, 2016 | Edited Paragraph           | 2     |
 | Satoe                        |October 4, 2016 | Edited Flows and Exception | 3     |
 | Frank                        |October 4, 2016 | Edited Paragraph           | 4     |
-| Satoe                        |October 30, 2016| Added Use Case 2           | 5     |
+| Satoe                        |October 30, 2016| Added Use Case 2,3,5       | 5     |
