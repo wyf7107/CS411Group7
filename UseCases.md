@@ -104,8 +104,8 @@ Authenticate User is a function that helps user to create an account on our web 
   </tr>
   <tr>  
    <td> Includes: </td>
-   <td> <ol><li> Store name card information. </li>
-     <li> Search for contact </li>
+   <td> <ol><li> Authenticate User </li>
+     <li>  </li>
      <li> Confirm Completion </li>
      </ol>
    </td>
@@ -140,6 +140,111 @@ Authenticate User is a function that helps user to create an account on our web 
   </tr>
  </table>
 
+
+<table>
+  <tr>
+    <td> Use Case ID:</td>
+    <td colspan ="3"> 2 </td>
+  </tr>
+  <tr>
+    <td> Use Case Name: </td>
+    <td colspan ="3"> Store Name Card Info </td>
+  <tr>
+    <td> Created By: </td>
+    <td> Jesus Franco, Lai Wei, Yifan Wang, Satoe Sakuma </td>
+    <td> Last Updated By: </td>
+    <td> Satoe Sakuma </td>
+  </tr>
+  <tr>
+   <td> Date Created: </td>
+   <td> October 31, 2016 </td>
+   <td> Date Last Updated: </td>
+   <td> October 31, 2016</td>
+  </tr>
+</table>   
+
+<table> 
+  <tr> 
+   <td> Actors: </td>
+   <td> Ambitious Job Seeker (User) </td>
+  </tr>
+  <tr>
+    <td> Description: </td>
+    <td> We are attempting to ideally have the user take a picture of the business card (if not then input the information) and we will then sort and store the contacts in a list format. </td>
+  </tr>
+  <tr>
+    <td> Trigger: </td>
+    <td> <ol>
+      <li> The user meets someone new and would like to keep them as a professional contact but not crowd up their default contact list.  </li>
+     </ol>
+     </td>
+  </tr>
+  <tr>
+   <td> Preconditions: </td>
+   <td> <ol><li> In order for this use case to execute, we need the user to have access to the information of the contact. </li>
+        <li> The camera on the phone is functioning. </li> 
+        </ol>
+   </td>
+  </tr>
+  <tr>
+   <td> Postconditions: </td>
+   <td> <ol><li> Add to the list of previous contacts in the list that users can scroll through. </li> </ol>
+        </td>
+  </tr>
+  <tr>
+    <td> Normal Flow: </td>
+    <td> 1.0. User has met someone new and has gotten a business card. <br>
+         1.1. User will either take a picture of business card. <br>
+         1.2 Contact name will appear on the list with option to see more of their info.</td>
+  </tr>
+  <tr>  
+   <td> Alternative Flows: </td>
+   <td> 1.0. User can input information manually.</td>
+  <tr>
+  <tr>  
+   <td> Exceptions: </td>
+   <td> 1.1 E.0. Contact did not get business card, but would like to still save their information by asking the contact to fill in the needed information. System has option to input manually.  <br>
+        1.1 E.1. User's camera is not working. System will ask to manually insert. <br>
+     
+     </td>
+  </tr>
+  <tr>  
+   <td> Includes: </td>
+   <td> <ol><li> Locate on Map </li>
+     <li> Authenticate User </li>
+     <li> Search for Contact </li>
+     </ol>
+   </td>
+  </tr>
+  <tr>  
+   <td> Priority: </td>
+   <td> High </td>
+  </tr>
+  <tr>  
+   <td> Frequency of Use: </td>
+   <td> 10 actions per user per hour at a career fair or networking event. /td>
+  </tr>
+  <tr>  
+   <td> Business Rules: </td>
+   <td> Privacy Etiquette</td>
+  </tr>
+  <tr>  
+   <td> Special Requirements: </td>
+   <td> <ul><li> Card Scanner API must be functional with little error. </li>
+   <li> Database must be big enough to store the contact information. </li></ul>
+   </td>
+  </tr>
+  <tr>  
+   <td> Assumptions: </td>
+   <td> We assume that the user will remember to add contact in the database. </td>
+  </tr>
+  <tr>  
+   <td> Notes and Issues: </td>
+   <td> <ul><li> Understanding the camera API. </li>
+ </ul>
+   </td>
+  </tr>
+ </table>
 
 
 
@@ -278,9 +383,10 @@ Authenticate User is a function that helps user to create an account on our web 
   
 ## Revision History
 
-| Name                         | Date          | Reason for Changes         |Version|
-| ---------------------------- |:-------------:|:--------------------------:|:------|
-| Jesus, Lai Wei, Yifan, Satoe |October 2, 2016| Date Created               | 1     |
-| Satoe                        |October 3, 2016| Edited Paragraph           | 2     |
-| Satoe                        |October 4, 2016| Edited Flows and Exception | 3     |
-| Frank                        |October 4, 2016| Edited Paragraph           | 4     |
+| Name                         | Date           | Reason for Changes         |Version|
+| ---------------------------- |:--------------:|:--------------------------:|:------|
+| Jesus, Lai Wei, Yifan, Satoe |October 2, 2016 | Date Created               | 1     |
+| Satoe                        |October 3, 2016 | Edited Paragraph           | 2     |
+| Satoe                        |October 4, 2016 | Edited Flows and Exception | 3     |
+| Frank                        |October 4, 2016 | Edited Paragraph           | 4     |
+| Satoe                        |October 30, 2016| Added Use Case 2           | 5     |
