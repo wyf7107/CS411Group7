@@ -193,18 +193,18 @@ Authenticate User is a function that helps user to create an account on our web 
   </tr>
   <tr>
     <td> Normal Flow: </td>
-    <td> 1.0. User has met someone new and has gotten a business card. <br>
-         1.1. User will either take a picture of business card. <br>
-         1.2 Contact name will appear on the list with option to see more of their info.</td>
+    <td> 2.0. User has met someone new and has gotten a business card. <br>
+         2.1. User will either take a picture of business card. <br>
+         2.2 Contact name will appear on the list with option to see more of their info.</td>
   </tr>
   <tr>  
    <td> Alternative Flows: </td>
-   <td> 1.0. User can input information manually.</td>
+   <td> 2.0. User can input information manually.</td>
   <tr>
   <tr>  
    <td> Exceptions: </td>
-   <td> 1.1 E.0. Contact did not get business card, but would like to still save their information by asking the contact to fill in the needed information. System has option to input manually.  <br>
-        1.1 E.1. User's camera is not working. System will ask to manually insert. <br>
+   <td> 2.1 E.0. Contact did not get business card, but would like to still save their information by asking the contact to fill in the needed information. System has option to input manually.  <br>
+        2.1 E.1. User's camera is not working. System will ask to manually insert. <br>
      
      </td>
   </tr>
@@ -246,6 +246,111 @@ Authenticate User is a function that helps user to create an account on our web 
   </tr>
  </table>
 
+<table>
+  <tr>
+    <td> Use Case ID:</td>
+    <td colspan ="3"> 3 </td>
+  </tr>
+  <tr>
+    <td> Use Case Name: </td>
+    <td colspan ="3"> Send Notification </td>
+  <tr>
+    <td> Created By: </td>
+    <td> Jesus Franco, Lai Wei, Yifan Wang, Satoe Sakuma </td>
+    <td> Last Updated By: </td>
+    <td> Satoe </td>
+  </tr>
+  <tr>
+   <td> Date Created: </td>
+   <td> October 31, 2016 </td>
+   <td> Date Last Updated: </td>
+   <td> October 31, 2016</td>
+  </tr>
+</table>   
+
+<table> 
+  <tr> 
+   <td> Actors: </td>
+   <td> Ambitious Job Seeker (User) </td>
+  </tr>
+  <tr>
+    <td> Description: </td>
+    <td> We look to have notifications send to the user's device at the frequency they chose to reach out to a specific contact, which will remind the user to keep their professional contacts close. </td>
+  </tr>
+  <tr>
+    <td> Trigger: </td>
+    <td> <ol>
+      <li> User has set to reach out to contact every x months, it is approaching x months since the last point of contact. </li>
+      <li> It is the contact's birthday or some other special day, and user has set to reach out on those days.</li> </ol>
+     </td>
+  </tr>
+  <tr>
+   <td> Preconditions: </td>
+   <td> <ol><li> In order for this use case to execute, user should have already specified how often they would like to reach out. </li>
+        <li> User authentication must be working properly to ensure the user's contacts to be displayed. </li> 
+        <li> The user's push notifications must be turned on. </li></ol>
+   </td>
+  </tr>
+  <tr>
+   <td> Postconditions: </td>
+   <td> <ol><li> To keep track of when you last contacted this contact and update any changes of the contacts  </li> </ol>
+        </td>
+  </tr>
+  <tr>
+    <td> Normal Flow: </td>
+    <td> 3.0. User is notified to reach out to contact due to time span specified or special day. <br>
+         3.1. User will handwrite a note or use one of our templates to send email. <br>
+         3.2 User will confirm that they are still professionally connected </td>
+         
+  </tr>
+  <tr>  
+   <td> Alternative Flows: </td>
+   <td> 3.0. User wants to reach out even though it has not been a specific amount of time.  </td>
+  <tr>
+  <tr>  
+   <td> Exceptions: </td>
+   <td> 3.3 E.0. User confirms they have reached out even though they haven't.  <br>
+        3.3 E.1. User does not reach out and reports that they haven't when asked for confirmation. System will remind them again in the next couple days.<br>
+     
+     </td>
+  </tr>
+  <tr>  
+   <td> Includes: </td>
+   <td> <ol><li> Store name card information. </li>
+     <li> Authenticate User </li>
+     <li> Search for Contact </li>
+     </ol>
+   </td>
+  </tr>
+  <tr>  
+   <td> Priority: </td>
+   <td> Medium </td>
+  </tr>
+  <tr>  
+   <td> Frequency of Use: </td>
+   <td> However often user sets to send notifications. I would assume at least once a year for each contact per person. </td>
+  </tr>
+  <tr>  
+   <td> Business Rules: </td>
+   <td> Privacy Etiquette</td>
+  </tr>
+  <tr>  
+   <td> Special Requirements: </td>
+   <td> <ul><li> The push notification function on the phone must be functional.</li>
+   <li> </li></ul>
+   </td>
+  </tr>
+  <tr>  
+   <td> Assumptions: </td>
+   <td> We assume that the user wants to stay in contact and receive notifications to do so. </td>
+  </tr>
+  <tr>  
+   <td> Notes and Issues: </td>
+   <td> <ul><li> Figure out how to use notification function default on the phone. </li>
+ </ul>
+   </td>
+  </tr>
+ </table>
 
 
 
