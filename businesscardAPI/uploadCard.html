@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>IntSig BCR Test </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function (e) {
+    $('#myform').on('submit',(function(e) {
+        e.preventDefault();
+
+        var formData = new FormData(this);
+
+        $.ajax({
+            type:'POST',
+            url: $(this).attr('action'),
+            data:formData,
+            cache:false,
+            contentType: false,
+            processData: false,
+            success:function(data){
+                console.log("success");
+                localStorage.setItem('jsondata', JSON.stringify(data));
+                //var retrievedObject = localStorage.getItem('jsondata');
+                console.log(data);
+                window.location = "displayCard.html";
+
+            },
+            error: function(data){
+                console.log("error");
+                console.log(data);
+            }
+        });
+    }));
+});
+  </script>
+</head>
+<body>
+    <h2>IntSig BCR Test v1.3</h2><hr>
+    <form id="myform" method='POST' enctype='multipart/form-data' action='http://bcr2.intsig.net/BCRService/BCR_VCF2?user=wyf7107@bu.edu&pass=AR34LCMBXL9C4RDN&json=1&lang=524287'>Please specify a JPG file<br>
+    <input type=file name=upfile size=20><br><br>
+    <input type=submit value="upload">
+    </form>
+
+    <hr>
+    This page will return a vCard file. Powered by IntSig.
+</body>
+</html>
