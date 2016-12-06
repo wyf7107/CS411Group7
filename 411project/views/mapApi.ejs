@@ -94,6 +94,7 @@ request.onreadystatechange = function() {
 request.open("GET","https://maps.googleapis.com/maps/api/geocode/json?address=addr&key=AIzaSyBpK2Djlc9FPKw3ZL9xZgNwPUTAxT8ykCk" , true);
 request.send(null);
 
+while (!lat) {}
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {
       "lat": lat,
