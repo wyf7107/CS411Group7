@@ -74,7 +74,7 @@ function initAutocomplete() {
 
 var addr = location.search.split('address=')[1]
 
-var request = makeHttpObject();
+var request = new XMLHttpRequest();
 request.open("GET", "https://maps.googleapis.com/maps/api/geocode/json?address=addr&key=AIzaSyBpK2Djlc9FPKw3ZL9xZgNwPUTAxT8ykCk", false);
 request.send(null);
 console.log(request.responseText);
