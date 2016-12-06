@@ -134,7 +134,7 @@ function initAutocomplete() {
   });
   // [END region_getplaces]
 }
-var addr = req.param('address');
+var addr = location.search.split('address=')[1]
 console.log(addr);
 
 
