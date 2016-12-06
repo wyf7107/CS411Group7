@@ -134,10 +134,11 @@ function initAutocomplete() {
   });
   // [END region_getplaces]
 }
+var addr = req.param('address');
 
 
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpK2Djlc9FPKw3ZL9xZgNwPUTAxT8ykCk&libraries=places&callback=initAutocomplete"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpK2Djlc9FPKw3ZL9xZgNwPUTAxT8ykCk&libraries=places&callback=initAutocomplete&address=" + addr
          async defer></script>
   </body>
 </html>
