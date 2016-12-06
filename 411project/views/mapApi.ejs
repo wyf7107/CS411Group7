@@ -83,6 +83,11 @@ request.onreadystatechange = function() {
         if (request.status === 200) {
             document.body.className = 'ok';
             var jsondata = JSON.parse(request.responseText);
+            console.log(jsondata["results"]);
+            console.log(jsondata["results"]["geometry"]);
+            console.log(jsondata["results"]["geometry"]["location"]);
+            console.log(jsondata["results"]["geometry"]["location"]["lat"]);
+            
             lat = jsondata["results"]["geometry"]["location"]["lat"];
             lat = jsondata["results"]["geometry"]["location"]["lng"];
             console.log(request.responseText);
