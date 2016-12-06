@@ -85,7 +85,7 @@ request.onreadystatechange = function() {
             var jsondata = JSON.parse(request.responseText);
             
             lat = jsondata["results"]["0"]["geometry"]["location"]["lat"];
-            lat = jsondata["results"]["0"]["geometry"]["location"]["lng"];
+            lng = jsondata["results"]["0"]["geometry"]["location"]["lng"];
         } else {
             document.body.className = 'error';
         }
