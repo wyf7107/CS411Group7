@@ -2,7 +2,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Node Authentication</title>
+    <title>Maggie: Node Authentication</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <style>
@@ -43,16 +43,24 @@
 <div class="container">
 
     <div class="page-header text-center">
-        <h1><span class="fa fa-anchor"></span> Profile Page</h1>
-        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+        <h1>Profile Page</h1>
+        
     </div>
 
     <div class="row">
 
         <!-- LOCAL INFORMATION -->
         <div class="col-sm-6">
+          <h2>Search For Contact<h2>
+            <form><input type="text" name="search" placeholder="Search..">
+            </form>
+
+
+        </div>
+        <div class="col-sm-6">
             <div syle="width:800px; margin: 0 auto;  class="well">
-                <h3><span class="fa fa-user"></span> Local</h3>
+                <h2>Save Contact Using Scanner</h2>
+                    
                     <p>
                       <form id="myform" method='POST' enctype='multipart/form-data' action='http://bcr2.intsig.net/BCRService/BCR_VCF2?user=wyf7107@bu.edu&pass=AR34LCMBXL9C4RDN&json=1&lang=524287'>Please specify a JPG file<br>
                       <input type=file name=upfile size=20><br><br>
@@ -61,6 +69,16 @@
                     </p>
 
             </div>
+        </div>
+        <div class="col-sm-6">
+        <h2>Save Contact Manualy</h2>
+         <button type="submit">Store Contacts Manually</button>
+       
+
+        </div>
+        <div class="col-sm-6">
+          <h2>Logout</h2>
+            <a href="/logout" class="btn btn-default btn-sm">Logout</a>
         </div>
 
     </div>
