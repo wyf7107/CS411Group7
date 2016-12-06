@@ -7,6 +7,22 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <style>
         body        { padding-top:80px; word-wrap:break-word; }
+        form {
+                width:500px;
+                margin:50px auto;
+          }
+          .search {
+                padding:8px 15px;
+                background:rgba(50, 50, 50, 0.2);
+                border:0px solid #dbdbdb;
+            }
+          .button {
+                position:relative;
+                padding:6px 15px;
+                left:-8px;
+                border:2px solid #207cca;
+                background-color:#207cca;
+                color:#fafafa;
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
@@ -52,7 +68,9 @@
         <!-- LOCAL INFORMATION -->
         <div class="col-sm-6">
           <h2>Search For Contact<h2>
-            <form><input type="text" name="search" placeholder="Search..">
+            <form>
+            <input type="text" name="search" placeholder="Search..." required>
+            <input type = "button" value="Search">
             </form>
 
 
