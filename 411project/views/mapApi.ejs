@@ -83,14 +83,9 @@ request.onreadystatechange = function() {
         if (request.status === 200) {
             document.body.className = 'ok';
             var jsondata = JSON.parse(request.responseText);
-            console.log(jsondata["results"]);
-            console.log(jsondata["results"]["0"]["geometry"]);
-            console.log(jsondata["results"]["0"]["geometry"]["location"]);
-            console.log(jsondata["results"]["0"]["geometry"]["location"]["lat"]);
             
             lat = jsondata["results"]["0"]["geometry"]["location"]["lat"];
             lat = jsondata["results"]["0"]["geometry"]["location"]["lng"];
-            console.log(request.responseText);
         } else {
             document.body.className = 'error';
         }
@@ -101,8 +96,8 @@ request.send(null);
 
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {
-      "lat": 33.3632256,
-      "lng": -117.0874871
+      "lat": lat,
+      "lng": lng
     },
     zoom: 13,
     mapTypeId: google.maps.MapTypeId.ROADMAP
