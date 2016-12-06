@@ -32,7 +32,7 @@
       addressstring += jsondata["address"][0]["item"][key] + ",";
     }
   }
-  htmlText += '<p class="p-adress"><a href="/mapApi"> Adress: ' + addressstring + '</a></p>';
+  htmlText += '<p class="p-adress"><a href="google.com/maps/place/" + addressstring > Adress: ' + addressstring + '</a></p>';
 }
   if(jsondata["organization"]){
     if(jsondata["organization"][0]["item"]["name"]){
