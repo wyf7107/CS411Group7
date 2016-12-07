@@ -24,7 +24,7 @@
         var addr = location.search.split('address=')[1];
 	console.log(addr);
 	var geocoder = new google.maps.Geocoder();
-	geocoder.geocode({address: addr}, fuction(results,status) {
+	geocoder.geocode({address: addr}, function(results,status) {
 	  if (status == google.maps.GeocoderStatus.OK){
 	    myResult = results[0].geometry.location;
 	    createMarker(myResult);
