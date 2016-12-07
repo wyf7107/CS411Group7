@@ -20,7 +20,8 @@
 	geocoder.geocode({address: addr}, function(results, status) {
 	  if (status == google.maps.GeocoderStatus.OK) {
 	    myResult = results[0].geometry.location;
-	  }  
+	  }
+	}  
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 4,
           center: myResult
