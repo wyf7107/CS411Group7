@@ -32,6 +32,9 @@
 	    map.setCenter(myResult);
 	    map.setZoom(17);
 	  }
+	  else {
+	    alert('Geocode was not successful: ' + status);
+	  }
 	});
       }
       function createMarker(latlng) {
