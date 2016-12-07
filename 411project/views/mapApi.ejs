@@ -13,24 +13,18 @@
     <div id="map"></div>
     <script>
       function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
         var myResult;
         var addr = location.search.split('address=')[1];
 	console.log(addr);
-        var map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 4,
-          center: {lat: -25.363, lng: 131.044};
-        }
-	var geocoder = new google.maps.Geocoder();
-	geocoder.geocode({address: addr}, function(results, status) {
-	  if (status == google.maps.GeocoderStatus.OK) {
-	    myResult = results[0].geometry.location;
-	    var marker = new google.maps.Marker({
-            position: myResult,
-            map: map,
-	    map.setCenter(myResult);
-	    map.setZoom(17);
-	  }
-	});
+	var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
       }
     </script>
     <script async defer
