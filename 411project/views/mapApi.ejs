@@ -26,7 +26,8 @@
       google.maps.event.addDomListener(window, 'load', initialize);
       
       function searchAddress() {
-        var addr = location.search.split('address=')[1]
+        var addr = location.search.split('address=')[1];
+	console.log(addr);
         var geocoder = new google.maps.Geocoder();
       	geocoder.geocode({address: addressInput}, function(results, status) {
 
