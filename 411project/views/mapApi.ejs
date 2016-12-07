@@ -27,6 +27,7 @@
 	geocoder.geocode({address: addr}, function(results,status) {
 	  if (status == google.maps.GeocoderStatus.OK){
 	    myResult = results[0].geometry.location;
+	    console.log(myResult);
 	    createMarker(myResult);
 	    map.setCenter(myResult);
 	    map.setZoom(17);
