@@ -18,14 +18,28 @@
           zoom: 4,
           center: uluru
         });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
+        var addr = location.search.split('address=')[1]
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode({address: addr}, function(results, status) {
+          if (status == google.maps.GeocoderStatus.OK) {
+          var myResults = results[0].geometry.location;
+          createMarker(myResults);
+          map.setCenter(myResults);
+          map.setZoom(17);
+        });
+      function createMarker(latlng) {
+        if(marker != undefined && marker != '') {
+          marker.setMap(null);
+          marker = '';
+        }
+        marker = new google.maps.Marker({
+          map: map,
+          position: latlng
         });
       }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpK2Djlc9FPKw3ZL9xZgNwPUTAxT8ykCk&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpK2Djlc9FPKw3ZL9xZgNwPUTAxT8ykCk&callback=initMap&address=" + addr">
     </script>
   </body>
 </html>
