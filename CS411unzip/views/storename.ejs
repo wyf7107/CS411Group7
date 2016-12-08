@@ -1,30 +1,66 @@
+<!-- views/storenames.ejs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MY APP</title>
+  <title>Manually Store Contacts</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+  <style>
+    body        { padding-top:80px;
+                  background-color: white;
+                }
+
+    .header {
+        color: white;
+        text-align: center;
+        padding-top: 30px;
+        background-color: rgba(204, 0, 102,1);
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        font-weight: bold;
+        font-size: 600px;
+        width: 50%;
+        height: 20%;
+        -moz-box-shadow: 5px 5px 5px #777777;
+        -webkit-box-shadow: 5p 5px 5px #777777;
+        box-shadow: 5px 5px 5px #777777;
+    }
+    h2 {
+        color: white;
+        margin-top:100px;
+        margin-bottom: 100px;
+        position: relative;
+        font-size: 30 px;
+    }
+    .container {
+        background-color: rgba(0, 153, 153, 1);
+    }
+    .jumbotraon {
+        background-color: rgba(0, 153, 153, 1);
+    color: white;
+        -moz-box-shadow: 0 0 19px #777777;
+        -webkit-box-shadow: inset 0 0 10px #777777;
+        box-shadow: 0 0 10px #777777;
+    }
+    </style>
 </head>
 <body>
-Please Save You Contacts
+  <div class ="header">
+    <h1>Add Contacts Manually</h1>
+  </div>
 
-  <ul class="quotes">
-  <% for(var i=0; i<quotes.length; i++) {%>
-    <li class="quote">
-      <span><%= "first name :" +quotes[i].first_name+"   " %></span>
-      <span><%= "last name : "+quotes[i].last_name +"   "%></span>
-      <span><%= "phone number :"+quotes[i].phone_number+"   " %></span>
-      <span><%= "address :"+quotes[i].address+"   " %></span>
-    </li>
-  <% } %>
-  </ul>
+  <div class="jumbotron text-center">
+    <h2> Please fill in required fields</h2>
 
   <form action="/quotes" method="POST">
 <input type="text" placeholder="first name" name="first_name">
 <input type="text" placeholder="last name" name="last_name">
 <input type="text" placeholder="phone number" name="phone_number">
   <input type="text" placeholder="address" name="address">
-    
+
     <button type="submit">Submit</button>
   </form>
+  </div>
 </body>
 </html>
