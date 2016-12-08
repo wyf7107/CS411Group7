@@ -10,15 +10,6 @@ module.exports = function(app, passport) {
 
 const MongoClient = require('mongodb').MongoClient
 var db
-
-MongoClient.connect('mongodb://laiwei:112211@ds119718.mlab.com:19718/cs411', (err, database) => {
- 
- if (err) return console.log(err)
-  db = database
-  
-  })
-  
-  
   
   app.get('/store', (req, res) => {
   db.collection('quotes').find().toArray((err, result) => {
