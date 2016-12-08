@@ -7,28 +7,49 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
     <style>
         body        { padding-top:80px;
-                      background-color: rgb(255, 230, 179);
+                      background-color: white;
                     }
-        h1 {
-            font-size: 80px;
+        .header {
+            color: white;
+            text-align: center;
+            padding-top: 30px;
+            background-color: rgba(204, 0, 102,1);
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            font-weight: bold;
+            font-size: 600px;
+            width: 50%;
+            height: 20%;
+            -moz-box-shadow: 5px 5px 5px #777777;
+            -webkit-box-shadow: 5px 5px 5px #777777;
+            box-shadow: 5px 5px 5px #777777;
         }
         h2 {
+            color: white;
+            margin-top:100px;
+            margin-bottom:100px;
+            position: relative;
             font-size: 30px;
-            color: gray;
         }
         .container {
-            background-color: rgb(255, 230, 179);
+            background-color: rgba(0, 153, 153,1);
         }
         .jumbotron  {
-            background-color: rgb(255, 230, 179);
+                  background-color: rgba(0, 153, 153, 1);                        color: white;  
+                -moz-box-shadow: 0  0 10px #777777;
+                -webkit-box-shadow: inset 0 0 10px #777777;
+                box-shadow: 0 0 10px #777777;
+            
         }
         </style>
 </head>
 <body>
-<div class="container">
+   <div class="header">
+       <h1>Maggie</h1>
+    </div>
 
     <div class="jumbotron text-center">
-        <h1> Maggie</h1>
         <h2>Your Personal Business Assistant.</h2>
 
         <p>Login or Register</p>
@@ -37,6 +58,7 @@
         <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span> Signup</a>
     </div>
 
-</div>
+
+
 </body>
 </html>
