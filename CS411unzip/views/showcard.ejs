@@ -1,0 +1,61 @@
+<!-- views/login.ejs -->
+<!doctype html>
+<html>
+<head>
+  <title>IntSig BCR Test </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+  <body>
+    <h2>IntSig BCR Test v1.3</h2><hr>
+    <p id=demo></p>
+    <hr>
+    This page will return a vCard file. Powered by IntSig.
+  </body>
+  <script>
+
+  var cardinfo = localStorage.getItem('jsondata');
+  var jsondata = JSON.parse(cardinfo)
+  console.log(jsondata);
+  var htmlText = '';
+
+  htmlText += '<div class="div-conatiner">';
+  if(jsondata["formatted_name"]){
+    htmlText += '<p class="p-name"> Name: ' + jsondata["formatted_name"][0]["item"] + '</p>';
+  }
+  if(jsondata["email"]){
+    htmlText += '<p class="p-email"> Email: ' + jsondata["email"][0]["item"] + '</p>';
+  }
+  if(jsondata["address"]){
+    var addressstring = "";
+    for(var key in jsondata["address"][0]["item"]){
+      if(key != "type"){
+      addressstring += jsondata["address"][0]["item"][key] + ",";
+    }
+  }
+  htmlText += '<p class="p-adress"><a href="/mapApi?address=' + addressstring + '"> Adress: ' + addressstring + '</a></p>';
+}
+  if(jsondata["organization"]){
+    if(jsondata["organization"][0]["item"]["name"]){
+    htmlText += '<p class="p-org"> Organization: ' + jsondata["organization"][0]["item"]["name"] + '</p>';
+  }else{
+    htmlText += '<p class="p-org"> Organization: ' + jsondata["organization"][0]["item"]["unit"] + '</p>';
+  }
+}
+
+  if(jsondata["telephone"]){
+    htmlText += '<p class="p-tel"> Tel: ' + jsondata["telephone"][0]["item"]["number"] + '</p>';
+  }
+
+
+
+
+  document.getElementById("demo").innerHTML = htmlText;
+
+
+  //for(var key in jsondata){
+
+    //console.log(key);
+    //console.log(jsondata[key][0]["item"]);
+  //}
+  </script>
+</html>
