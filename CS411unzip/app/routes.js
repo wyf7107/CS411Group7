@@ -7,7 +7,10 @@ module.exports = function(app, passport) {
     app.get('/', function(req, res) {
         res.render('index.ejs'); // load the index.ejs file
     });
-
+   
+    app.get('/storename', function(req, res) {
+	res.render('storename.ejs'); //load the storename form
+    });
 const MongoClient = require('mongodb').MongoClient
 var db
   
