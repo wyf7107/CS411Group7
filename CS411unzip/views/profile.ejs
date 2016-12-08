@@ -6,7 +6,39 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <style>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        body { 
+          padding-top:80px; word-wrap:break-word; 
+        background-color = rgb(255, 230, 179);
+        }
+        form {
+          width:500px;
+          margin:50px auto;
+        }
+        .search {
+          padding:8px 15px;
+          backgroundblack;
+          border:0px solid #dbdbdb;
+        }
+        .button {
+          position:relative;
+          padding:6px 15px;
+          left:-8px;
+          border:2px solid #207cca;
+          background-color:#207cca;
+          color:#fafafa;
+        }
+              .button:hover  {
+                background-color:#fafafa;
+                color:#207cca;
+            }
+=======
         body        { padding-top:80px; word-wrap:break-word; background-color: rgb(255, 230, 179);}
+>>>>>>> origin/master
+=======
+        body        { padding-top:80px; word-wrap:break-word; background-color: rgb(255, 230, 179);}
+>>>>>>> origin/master
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
@@ -28,7 +60,6 @@
                   localStorage.setItem('jsondata', JSON.stringify(data));
                   //var retrievedObject = localStorage.getItem('jsondata');
                   window.location = '/showcard';
-
               },
               error: function(data){
                   console.log("error");
@@ -40,25 +71,49 @@
     </script>
 </head>
 <body>
+<style>
+  body {
+      background-color: white;}
+    h1 {
+        margin-top: 30px;
+        width:30%;
+        font-size: 40px;
+    }
+    .col-sm-6 {
+        background-color: rgba(0, 153, 153, 0.9);
+        -moz-box-shadow: 0 0 10px #777777;
+        -webkit-box-shadow: 0 0 10px #777777;
+        box-shadow: 0 0 10px #777777;
+        width:230px;
+        height: 300px;
+        float:center;
+        margin: 50px;
+        padding: 5px;
+    }
+    .page-header text-center {
+        background-color: gray;
+    }
+</style>
 <div class="container">
 
-    <div class="page-header text-center">
-        <h1>Profile Page</h1>
+    <h1>Choose an Option</h1>
         
-    </div>
+
 
     <div class="row">
 
         <!-- LOCAL INFORMATION -->
         <div class="col-sm-6">
-          <h2>Search For Contact<h2>
-            <form><input type="text" name="search" placeholder="Search..">
+            <h2>Search For Contact</h2>
+            <form>
+            <input type="text" name="search" placeholder="Search..." required>
+            <input type = "button" value="Search">
+
             </form>
 
 
         </div>
         <div class="col-sm-6">
-            <div syle="width:800px; margin: 0 auto;  class="well">
                 <h2>Save Contact Using Scanner</h2>
                     
                     <p>
@@ -67,23 +122,21 @@
                       <button type=submit>Upload</button>
                       </form>
                     </p>
-
-            </div>
         </div>
         <div class="col-sm-6">
         <h2>Save Contact Manualy</h2>
-        <form action="/store" method="GET">
-         <button type="submit">Store Contacts Manually</button>
-        </form>
-
+          <form>
+            <button type="submit">Store Contacts Manually</button>
+          </form>
+       
         </div>
         <div class="col-sm-6">
           <h2>Logout</h2>
+          <form>
             <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+          </form>  
         </div>
-
     </div>
-
 </div>
 </body>
 </html>
