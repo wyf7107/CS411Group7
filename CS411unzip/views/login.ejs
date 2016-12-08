@@ -16,29 +16,58 @@
 </head>
 <body>
     <style>
-        button {
-            color:gray;
+        .container {
+            background-color: rgba(0, 153, 153, 0.9);
+            -moz-box-shadow: 0 0 10px #777777;
+            -webkit-box-shadow: 0 0 10px #777777;
+            box-shadow: 0 0 10px #777777;
+            margin-top: 35px;
         }
-        div {
-            border-bottom: 1px solid #efefef;
+        
+        .header {
+            color: white;
+            text-align: center;
+            padding-top: 30px;
+            background-color: rgba(204, 0, 102,1);
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            font-weight: bold;
+            font-size: 600px;
+            width: 50%;
+            height: 20%;
+            -moz-box-shadow: 5px 5px 5px #777777;
+            -webkit-box-shadow: 5px 5px 5px #777777;
+            box-shadow: 5px 5px 5px #777777;
+        }
+        button {
+            color:blue;
+        }
+
+        button {
+            background-color: rgba(204, 0, 102,1);;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
             margin: 10px;
-            
-        }
-        button {
-             margin: 10px;
+            cursor: pointer;
         }
         .submit {
-            color: gray;
+            color: black;
         }
         .btn btn-warning btn-lg{
-            color: gray;
+            color: blue;
         }
     </style>
+<div class="header">
+    <h1>Log In</h1>
+</div>
 <div class="container">
- 
 
-
-    <h1>Login</h1>
 
     <!-- show any messages that come back with authentication -->
     <% if (message.length > 0) { %>
