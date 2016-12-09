@@ -89,7 +89,12 @@
             -moz-box-shadow: 5px 5px 5px #777777;
             -webkit-box-shadow: 5px 5px 5px #777777;
             box-shadow: 5px 5px 5px #777777;
+            position: relative;
+            display: inline-block;
         }
+    .container {
+        margin-top: 10px;
+    }
     .col-sm-6 {
         background-color: rgba(0, 153, 153, 0.9);
         -moz-box-shadow: 0 0 10px #777777;
@@ -115,6 +120,7 @@
             font-size: 16px;
             margin: 10px;
             cursor: pointer;
+            position: left;
         }
         .submit {
             color: white;
@@ -127,7 +133,7 @@
         -moz-box-shadow: 0 0 10px #777777;
         -webkit-box-shadow: 0 0 10px #777777;
         box-shadow: 0 0 10px #777777;
-        margin-top: 60px;
+        margin-top: 40px;
     }
        .btn btn-default btn -sm {
         color: pink;
@@ -139,7 +145,7 @@
     }
    .search {
        width: 357px;
-       margin: 4px;
+       margin-left: 40px;
     }
     #search_text{
         width: 397px;
@@ -149,6 +155,7 @@
         height: 52px;
         margin-right: 0;
         margin-top:0px;
+        margin-left:4px;
         color: white;
         outline: none;
         background:rgba(204, 0, 102,.7);
@@ -158,7 +165,7 @@
     }
     #search_button {
         border: 0 none;
-        background: rgba(204, 0, 102,1) url(search.png) center no-repeat;
+        background: rgba(204, 0, 102,1);
         width: 60px;
         float: left;
         text-align: center;
@@ -172,7 +179,7 @@
     .btn btn-default btn -sm {
         color: pink;
     }
-    .btn {
+    .bt {
           background-color: rgba(204, 0, 102,1);
             border: none;
             color: white;
@@ -181,14 +188,69 @@
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
-            margin: 10px;
+            margin-left: 0px;
+            margin-bottom: 20px;
             cursor: pointer;
+            float: left;
         
     } 
+    
+    .dropbtn {
+    background-color: rgba(204, 0, 102,1);
+    color: white;
+    width: 300px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer; 
+    margin-left: 0px;
+    margin-top: 0px;
+}
+    .dropdown {
+    float: left;
+    position: fixed;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: rgba(204, 0, 102, .8);
+}
 </style>
        
-<div class="header">
-     <h1>Choose an Option</h1>
+<div class="dropdown">
+    <button class="dropbtn">Choose an Opion</button>
+    <div class="dropdown-content">
+        <a href="#search">Search Contact</a>
+        <a href="#scanner">Save Contact Using Scanner</a>
+        <a href="#manual">Save Contact Manually</a>
+        <a href="/logout">Logout</a>
+    </div>
+   <!--  <h1>Choose an Option</h1> -->
 </div>
     
 <div class="container">
@@ -196,7 +258,7 @@
       <div class="row">
 
         <!-- LOCAL INFORMATION -->
-            <h2>Search For Contact</h2>
+            <h2 id="search">Search For Contact</h2>
           <!--  <form>
             <input type="text" name="search" placeholder="Search..." required>
             <input type = "button" value="Search">
@@ -204,14 +266,14 @@
             </form> -->
            <div class="search">
             <form action="" method="get">
-                <input type="text" name="search_text" id="search_text" placeholder="Search..."/>
+                <input type="text" name="search_text" id="search_text" placeholder=" Search..."/>
                 <input type="button" name="search_button" id="search_button"></a>
             </form>
         </div>
           
      </div>
         <div class=row>
-                <h2>Save Contact Using Scanner</h2>
+                <h2 id="scanner">Save Contact Using Scanner</h2>
                     
                     <p>
                       <form id="myform" method='POST' enctype='multipart/form-data' action='http://bcr2.intsig.net/BCRService/BCR_VCF2?user=wyf7107@bu.edu&pass=AR34LCMBXL9C4RDN&json=1&lang=524287'>Please specify a JPG file<br>
@@ -221,16 +283,16 @@
                     </p>
         </div>
         <div class="row">
-        <h2>Save Contact Manualy</h2>
+        <h2 id="manual">Save Contact Manualy</h2>
           <form>
-            <a href ="/storename" class="btn">Store Contacts Manually</a>
+            <a href ="/storename" class="bt">Store Contacts Manually</a>
           </form>
        
         </div>
         <div class="row">
           <h2>Logout</h2>
           <form>
-            <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+            <a href="/logout" class="bt">Logout</a>
           </form>  
         </div>
 </div>
