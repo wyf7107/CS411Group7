@@ -74,11 +74,22 @@
 <style>
   body {
       background-color: white;}
-    h1 {
-        margin-top: 30px;
-        width:30%;
-        font-size: 40px;
-    }
+    .header {
+            color: white;
+            text-align: center;
+            padding-top: 30px;
+            background-color: rgba(204, 0, 102,1);
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            font-weight: bold;
+            font-size: 600px;
+            width: 50%;
+            height: 20%;
+            -moz-box-shadow: 5px 5px 5px #777777;
+            -webkit-box-shadow: 5px 5px 5px #777777;
+            box-shadow: 5px 5px 5px #777777;
+        }
     .col-sm-6 {
         background-color: rgba(0, 153, 153, 0.9);
         -moz-box-shadow: 0 0 10px #777777;
@@ -93,27 +104,113 @@
     .page-header text-center {
         background-color: gray;
     }
+      button {
+            background-color: rgba(204, 0, 102,1);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .submit {
+            color: white;
+        }
+        #btn btn-warning btn-lg{
+            color: blue;
+        }
+    .row {
+        background-color: rgba(0, 153, 153, 0.9);
+        -moz-box-shadow: 0 0 10px #777777;
+        -webkit-box-shadow: 0 0 10px #777777;
+        box-shadow: 0 0 10px #777777;
+        margin-top: 60px;
+    }
+       .btn btn-default btn -sm {
+        color: pink;
+    }
+    h2 {
+        margin-top:80px;
+        padding: 12px;
+        color: white;
+    }
+   .search {
+       width: 357px;
+       margin: 4px;
+    }
+    #search_text{
+        width: 397px;
+        font-size: 16px;
+    
+        border: 0 none;
+        height: 52px;
+        margin-right: 0;
+        margin-top:0px;
+        color: white;
+        outline: none;
+        background:rgba(204, 0, 102,.7);
+        float: left;
+        box-sizing: border-box;
+        transition: all 0.15s;
+    }
+    #search_button {
+        border: 0 none;
+        background: rgba(204, 0, 102,1) url(search.png) center no-repeat;
+        width: 60px;
+        float: left;
+        text-align: center;
+        height: 52px;
+        cursor: pointer;
+        margin-bottom:40px;
+    }
+    a {
+        color: pink;
+    }
+    .btn btn-default btn -sm {
+        color: pink;
+    }
+    .btn {
+          background-color: rgba(204, 0, 102,1);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        
+    } 
 </style>
+       
+<div class="header">
+     <h1>Choose an Option</h1>
+</div>
+    
 <div class="container">
 
-    <h1>Choose an Option</h1>
-        
-
-
-    <div class="row">
+      <div class="row">
 
         <!-- LOCAL INFORMATION -->
-        <div class="col-sm-6">
             <h2>Search For Contact</h2>
-            <form>
+          <!--  <form>
             <input type="text" name="search" placeholder="Search..." required>
             <input type = "button" value="Search">
 
+            </form> -->
+           <div class="search">
+            <form action="" method="get">
+                <input type="text" name="search_text" id="search_text" placeholder="Search..."/>
+                <input type="button" name="search_button" id="search_button"></a>
             </form>
-
-
         </div>
-        <div class="col-sm-6">
+          
+     </div>
+        <div class=row>
                 <h2>Save Contact Using Scanner</h2>
                     
                     <p>
@@ -123,20 +220,19 @@
                       </form>
                     </p>
         </div>
-        <div class="col-sm-6">
+        <div class="row">
         <h2>Save Contact Manualy</h2>
           <form>
-            <a href ="/storename" class="btn btn-default btn -sm">Store Contacts Manually</a>
+            <a href ="/storename" class="btn">Store Contacts Manually</a>
           </form>
        
         </div>
-        <div class="col-sm-6">
+        <div class="row">
           <h2>Logout</h2>
           <form>
             <a href="/logout" class="btn btn-default btn-sm">Logout</a>
           </form>  
         </div>
-    </div>
 </div>
 </body>
 </html>
