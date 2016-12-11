@@ -12,6 +12,7 @@
     <form action='/addcontact' method='POST' >
       <input type="hidden" id="fullnameinput" name="fullname">
       <input type="hidden" id="emailinput" name="email">
+      <input type="hidden" id="numberinput" name="number">
       <input type="hidden" id="addressinput" name="address">
       <input type="submit" value="Add Contact to Profile">
     </form>
@@ -57,6 +58,7 @@
 
   if(jsondata["telephone"]){
     htmlText += '<p class="p-tel"> Tel: ' + jsondata["telephone"][0]["item"]["number"] + '</p>';
+    document.getElementById("numberinput").value = jsondata["telephone"][0]["item"]["number"];
   }
   document.getElementById("demo").innerHTML = htmlText;
 
