@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+</head>
+<body>
+  Here is  your contacts:
+
+  <ul class="contacts">
+  <% for(var i=0; i<contacts.length; i++) {%>
+    <li class="quote">
+      <span><%= 'fullname: '+contacts[i].fullname %></span>
+      <span><%= 'email :'+contacts[i].email %></span>
+      <span><%= 'phone :'+contacts[i].number %></span>
+      <span><%= 'address :'+contacts[i].address %></span>
+    </li>
+  <% } %>
+  </ul>
+
+ 
+</body>
+</html>

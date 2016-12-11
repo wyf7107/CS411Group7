@@ -8,31 +8,50 @@ module.exports = function(app, passport) {
         res.render('index.ejs'); // load the index.ejs file
     });
 
-    app.get('/storename', function(req, res) {
-	res.render('storename.ejs'); //load the storename form
-    });
-const MongoClient = require('mongodb').MongoClient
-var db
 
-  app.get('/store', (req, res) => {
-  db.collection('quotes').find().toArray((err, result) => {
-    if (err) return console.log(err)
+
+
+app.get('/store', (req, res) => {
+
+
+    res.render('storename.ejs')
+
+})
+
+
+
+
+app.post('/savename', function(req, res) {
+
+
+req.user.local.contacts.push({fullname:req.body.fullname,number:req.body.number,email:req.body.email,address:req.body.address} )
+
+
+req.user.save(function (err) {
+  if (err) return handleError(err);
+
+
+  res.redirect('/oksavecontact')
+
+  })
+
+ })
+
+
+
+app.get('/display', (req, res) => {
+
+
     // renders index.ejs
-    res.render('storename.ejs', {quotes: result})
-  })
-})
+    res.render('displaycontacs.ejs', {contacts : req.user.local.contacts})
 
 
-app.post('/quotes',function(req,res){
-    db.collection('quotes').save(req.body, (err, result) => {
-    if (err) return console.log(err)
-
-    console.log('saved to database')
-    res.redirect('/store')
-  })
 
 
 })
+
+
+
 
 
 

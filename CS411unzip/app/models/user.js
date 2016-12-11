@@ -12,6 +12,7 @@ var userSchema = mongoose.Schema({
         contacts     : [{
           fullname   : String,
           email      : String,
+          number     : String,
           address    : String
         }]
     },
