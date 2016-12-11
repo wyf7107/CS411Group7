@@ -7,13 +7,13 @@ module.exports = function(app, passport) {
     app.get('/', function(req, res) {
         res.render('index.ejs'); // load the index.ejs file
     });
-   
+
     app.get('/storename', function(req, res) {
 	res.render('storename.ejs'); //load the storename form
     });
 const MongoClient = require('mongodb').MongoClient
 var db
-  
+
   app.get('/store', (req, res) => {
   db.collection('quotes').find().toArray((err, result) => {
     if (err) return console.log(err)
@@ -21,8 +21,8 @@ var db
     res.render('storename.ejs', {quotes: result})
   })
 })
-    
-    
+
+
 app.post('/quotes',function(req,res){
     db.collection('quotes').save(req.body, (err, result) => {
     if (err) return console.log(err)
@@ -30,9 +30,10 @@ app.post('/quotes',function(req,res){
     console.log('saved to database')
     res.redirect('/store')
   })
-    
+
+
 })
-    
+
 
 
 
@@ -104,6 +105,29 @@ app.post('/quotes',function(req,res){
         // render the page and pass in any flash data if it exists
         res.render('mapApi.ejs');
     });
+
+    /************add contact post method***************/
+    app.post('/addcontact',(req,res)=>{
+      console.log(req.body);
+      req.user.local.contacts.push(req.body);
+      req.user.save((err,result)=>{
+        if(err) return console.log(err)
+        console.log("save to database")
+
+      });
+      res.redirect('/oksavecontact')
+
+    });
+
+    /************add contact post method end***************/
+
+    /************add oksavecontact get method***************/
+    app.get('/oksavecontact',(req,res)=>{
+      res.render('oksavecontact.ejs')
+    });
+
+    /************add oksavecontact get method end***************/
+
 
 };
 

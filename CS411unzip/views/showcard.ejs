@@ -8,31 +8,45 @@
   <body>
     <h2>Business card shows:</h2><hr>
     <p id=demo></p>
-    <hr>
-  </body>
+    <p>
+    <form action='/addcontact' method='POST' >
+      <input type="hidden" id="fullnameinput" name="fullname">
+      <input type="hidden" id="emailinput" name="email">
+      <input type="hidden" id="addressinput" name="address">
+      <input type="submit" value="Add Contact to Profile">
+    </form>
+    </p><br>
   <script>
 
   var cardinfo = localStorage.getItem('jsondata');
   var jsondata = JSON.parse(cardinfo)
   console.log(jsondata);
   var htmlText = '';
+  var addressstring = "";
 
   htmlText += '<div class="div-conatiner">';
   if(jsondata["formatted_name"]){
     htmlText += '<p class="p-name"> Name: ' + jsondata["formatted_name"][0]["item"] + '</p>';
+    document.getElementById("fullnameinput").value = jsondata["formatted_name"][0]["item"];
+
   }
   if(jsondata["email"]){
     htmlText += '<p class="p-email"> Email: ' + jsondata["email"][0]["item"] + '</p>';
+    document.getElementById("emailinput").value = jsondata["email"][0]["item"];
   }
+
   if(jsondata["address"]){
-    var addressstring = "";
+
     for(var key in jsondata["address"][0]["item"]){
       if(key != "type"){
       addressstring += jsondata["address"][0]["item"][key] + ",";
     }
   }
   htmlText += '<p class="p-adress"><a href="/mapApi?address=' + addressstring + '"> Adress: ' + addressstring + '</a></p>';
+  document.getElementById("addressinput").value = addressstring;
 }
+
+
   if(jsondata["organization"]){
     if(jsondata["organization"][0]["item"]["name"]){
     htmlText += '<p class="p-org"> Organization: ' + jsondata["organization"][0]["item"]["name"] + '</p>';
@@ -44,12 +58,7 @@
   if(jsondata["telephone"]){
     htmlText += '<p class="p-tel"> Tel: ' + jsondata["telephone"][0]["item"]["number"] + '</p>';
   }
-
-
-
-
   document.getElementById("demo").innerHTML = htmlText;
-
 
   //for(var key in jsondata){
 
@@ -57,4 +66,5 @@
     //console.log(jsondata[key][0]["item"]);
   //}
   </script>
+  </body>
 </html>
