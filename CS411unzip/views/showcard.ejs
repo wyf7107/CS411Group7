@@ -2,19 +2,55 @@
 <!doctype html>
 <html>
 <head>
-  <title>Business card Information</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Business Card Shows:</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link href="http://v4-alpha.getbootstrap.com/examples/cover/cover.css" rel="stylesheet">
+  <style>
+  body {
+    background: url(http://ringvemedia.com/server//bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  </style>
 </head>
   <body>
-    <h2>Business card shows:</h2><hr>
-    <p id=demo></p>
+    <nav class="navbar navbar-fixed-top" style="background-color:black;">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/profile">Back</a>
+        </div>
+      </div><!-- /.container-fluid -->
+    </nav>
+    <p id=demo style="padding:20% 0;"></p>
     <p>
     <form action='/addcontact' method='POST' >
       <input type="hidden" id="fullnameinput" name="fullname">
       <input type="hidden" id="emailinput" name="email">
       <input type="hidden" id="numberinput" name="number">
       <input type="hidden" id="addressinput" name="address">
-      <input type="submit" value="Add Contact to Profile">
+      <button type="submit" class="btn btn-warning btn-lg">Add This Contact to Profile</button>
     </form>
     </p><br>
   <script>
@@ -27,12 +63,12 @@
 
   htmlText += '<div class="div-conatiner">';
   if(jsondata["formatted_name"]){
-    htmlText += '<p class="p-name"> Name: ' + jsondata["formatted_name"][0]["item"] + '</p>';
+    htmlText += '<p class="p-name"><h1 style="color:black;"> ' + jsondata["formatted_name"][0]["item"] + '</h1></p>';
     document.getElementById("fullnameinput").value = jsondata["formatted_name"][0]["item"];
 
   }
   if(jsondata["email"]){
-    htmlText += '<p class="p-email"> Email: ' + jsondata["email"][0]["item"] + '</p>';
+    htmlText += '<p class="p-email"> <h3 style="color:black;">Email: ' + jsondata["email"][0]["item"] + '</h3></p>';
     document.getElementById("emailinput").value = jsondata["email"][0]["item"];
   }
 
@@ -43,21 +79,21 @@
       addressstring += jsondata["address"][0]["item"][key] + ",";
     }
   }
-  htmlText += '<p class="p-adress"><a href="/mapApi?address=' + addressstring + '"> Adress: ' + addressstring + '</a></p>';
+  htmlText += '<p class="p-adress"><h3 style="color:black;"><a href="/mapApi?address=' + addressstring + '"> Adress: ' + addressstring + '</a></h3></p>';
   document.getElementById("addressinput").value = addressstring;
 }
 
 
   if(jsondata["organization"]){
     if(jsondata["organization"][0]["item"]["name"]){
-    htmlText += '<p class="p-org"> Organization: ' + jsondata["organization"][0]["item"]["name"] + '</p>';
+    htmlText += '<p class="p-org"> <h3 style="color:black;">Organization: ' + jsondata["organization"][0]["item"]["name"] + '</h3></p>';
   }else{
     htmlText += '<p class="p-org"> Organization: ' + jsondata["organization"][0]["item"]["unit"] + '</p>';
   }
 }
 
   if(jsondata["telephone"]){
-    htmlText += '<p class="p-tel"> Tel: ' + jsondata["telephone"][0]["item"]["number"] + '</p>';
+    htmlText += '<p class="p-tel"> <h3 style="color:black;">Tel: ' + jsondata["telephone"][0]["item"]["number"] + '</h3></p>';
     document.getElementById("numberinput").value = jsondata["telephone"][0]["item"]["number"];
   }
   document.getElementById("demo").innerHTML = htmlText;

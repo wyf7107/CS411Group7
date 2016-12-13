@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Loaction of contact</title>
+    <meta charset="UTF-8">
+    <title>Contact Location</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Latest compiled and minified CSS -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="http://v4-alpha.getbootstrap.com/examples/cover/cover.css" rel="stylesheet">
+    <style>
+    body {
+      background: url(http://ringvemedia.com/server//bg.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    </style>
     <style>
        #map {
-        height: 400px;
+        height: 1600px;
         width: 100%;
        }
     </style>
   </head>
   <body>
-    <h3>Contact Location</h3>
-    <div id="map"></div>
+    <nav class="navbar navbar-fixed-top" style="background-color:black;">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/profile">Back</a>
+        </div>
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div id="map" style="padding:3% 0;"></div>
     <script>
       var marker;
       var map;
@@ -50,8 +89,7 @@
         });
       }
     </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpK2Djlc9FPKw3ZL9xZgNwPUTAxT8ykCk&callback=initMap&address=" + addr">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpK2Djlc9FPKw3ZL9xZgNwPUTAxT8ykCk&callback=initMap&address=" + addr">
     </script>
   </body>
 </html>

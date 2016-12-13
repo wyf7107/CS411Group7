@@ -3,72 +3,51 @@
 <html>
 <head>
     <title>Sign up</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
-    <style>
-        body {
-            padding-top:80px;
-            background-color: white;
-        }
-        .container {
-            background-color: rgba(0, 153, 153, 0.9);
-            -moz-box-shadow: 0 0 10px #777777;
-            -webkit-box-shadow: 0 0 10px #777777;
-            box-shadow: 0 0 10px #777777;
-            margin-top: 35px;
-        }
-        .header {
-            color: white;
-            text-align: center;
-            padding-top: 30px;
-            background-color: rgba(204, 0, 102,1);
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            font-weight: bold;
-            font-size: 600px;
-            width: 50%;
-            height: 20%;
-            -moz-box-shadow: 5px 5px 5px #777777;
-            -webkit-box-shadow: 5px 5px 5px #777777;
-            box-shadow: 5px 5px 5px #777777;
-        }
-        .form-group {
-            margin-top: 45px;
-        }
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Hello from Maggie</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-        .button {
-            margin: 10px;
-            color: gray;
-        }
-        .submit {
-            color: gray;
-        }
-        .btn btn-warning btn-lg{
-            color: gray;
-        }
-        .btn {
-            background-color: rgba(204, 0, 102,1);
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin-left: 0px;
-            margin-bottom: 20px;
-            cursor: pointer;
-            float: center;
-        }
+<!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="http://v4-alpha.getbootstrap.com/examples/cover/cover.css" rel="stylesheet">
+    <style>
+    body {
+      background: url(http://ringvemedia.com/server//bg.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+    form {
+      margin: auto;
+      width:300px;
+    }
     </style>
-</head>
 <body>
 
-    <div class="header">
-       <h1>Sign Up</h1>
-    </div>
-    <div class="container">
+  <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+
+          <div class="inner cover">
+            <h1 class="cover-heading" style="color:black">Log In</h1>
+            <p class="lead" style="color:black">Please Enter the Fields</p>
+            <p class="lead" style="color:black">
+
 
         <!-- show any messages that come back with authentication -->
         <% if (message.length > 0) { %>
@@ -91,9 +70,15 @@
 
     <hr>
 
-    <p>Already have an account? <a href="/login">Login</a></p>
-    <p>Or go <a href="/">home</a>.</p>
+    <p>Already have an account? <a href="/login" style="color:orange">Login</a></p>
+    <p>Or go <a href="/" style="color:orange">Home</a>.</p>
+  </p>
+</div>
 
+
+</div>
+
+</div>
 
 </div>
 </body>

@@ -3,44 +3,23 @@
 <html>
 <head>
     <title>My Profile</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-    <style>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        body {
-          padding-top:80px; word-wrap:break-word;
-        background-color = rgb(255, 230, 179);
-        }
-        form {
-          width:500px;
-          margin:50px auto;
-        }
-        .search {
-          padding:8px 15px;
-          backgroundblack;
-          border:0px solid #dbdbdb;
-        }
-        .button {
-          position:relative;
-          padding:6px 15px;
-          left:-8px;
-          border:2px solid #207cca;
-          background-color:#207cca;
-          color:#fafafa;
-        }
-              .button:hover  {
-                background-color:#fafafa;
-                color:#207cca;
-            }
-=======
-        body        { padding-top:80px; word-wrap:break-word; background-color: rgb(255, 230, 179);}
->>>>>>> origin/master
-=======
-        body        { padding-top:80px; word-wrap:break-word; background-color: rgb(255, 230, 179);}
->>>>>>> origin/master
-    </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Hello from Maggie</title>
+    <!-- Latest compiled and minified CSS -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="http://v4-alpha.getbootstrap.com/examples/cover/cover.css" rel="stylesheet">
     <script>
     $(document).ready(function (e) {
       $('#myform').on('submit',(function(e) {
@@ -69,244 +48,121 @@
       }));
   });
     </script>
+    <style>
+    body {
+      height: 100%;
+      margin: 0;
+    }
+    section {
+      text-align: center;
+      height: 40vh;
+    }
+    #inputfile{
+      width:200px;
+      margin:auto;
+    }
+    </style>
 </head>
 <body>
-<style>
-  body {
-      background-color: white;}
-    .header {
-            color: white;
-            text-align: center;
-            padding-top: 30px;
-            background-color: rgba(204, 0, 102,1);
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            font-weight: bold;
-            font-size: 600px;
-            width: 50%;
-            height: 20%;
-            -moz-box-shadow: 5px 5px 5px #777777;
-            -webkit-box-shadow: 5px 5px 5px #777777;
-            box-shadow: 5px 5px 5px #777777;
-            position: relative;
-            display: inline-block;
-        }
-    .container {
-        margin-top: 10px;
-    }
-    .col-sm-6 {
-        background-color: rgba(0, 153, 153, 0.9);
-        -moz-box-shadow: 0 0 10px #777777;
-        -webkit-box-shadow: 0 0 10px #777777;
-        box-shadow: 0 0 10px #777777;
-        width:230px;
-        height: 300px;
-        float:center;
-        margin: 50px;
-        padding: 5px;
-    }
-    .page-header text-center {
-        background-color: gray;
-    }
-      button {
-            background-color: rgba(204, 0, 102,1);
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 10px;
-            cursor: pointer;
-            position: left;
-        }
-        .submit {
-            color: white;
-        }
-        #btn btn-warning btn-lg{
-            color: blue;
-        }
-    .row {
-        background-color: rgba(0, 153, 153, 0.9);
-        -moz-box-shadow: 0 0 10px #777777;
-        -webkit-box-shadow: 0 0 10px #777777;
-        box-shadow: 0 0 10px #777777;
-        margin-top: 40px;
-    }
-       .btn btn-default btn -sm {
-        color: pink;
-    }
-    h2 {
-        margin-top:80px;
-        padding: 12px;
-        color: white;
-    }
-   .search {
-       width: 357px;
-       margin-left: 40px;
-    }
-    #search_text{
-        width: 397px;
-        font-size: 16px;
+  <nav class="navbar navbar-fixed-top" style="background-color:black;">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Maggie</a>
+      </div>
 
-        border: 0 none;
-        height: 52px;
-        margin-right: 0;
-        margin-top:0px;
-        margin-left:4px;
-        color: white;
-        outline: none;
-        background:rgba(204, 0, 102,.7);
-        float: left;
-        box-sizing: border-box;
-        transition: all 0.15s;
-    }
-    #search_button {
-        border: 0 none;
-        background: rgba(204, 0, 102,1);
-        width: 60px;
-        float: left;
-        text-align: center;
-        height: 52px;
-        cursor: pointer;
-        margin-bottom:40px;
-    }
-    a {
-        color: pink;
-    }
-    .btn btn-default btn -sm {
-        color: pink;
-    }
-    .bt {
-          background-color: rgba(204, 0, 102,1);
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin-left: 0px;
-            margin-bottom: 20px;
-            cursor: pointer;
-            float: left;
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Nav to <span class="caret"></span></a>
+            <ul class="dropdown-menu" >
+              <li><a href="#search" style="opacity:0.7;">Show My Contacts</a></li>
+              <li><a href="#scanner" style="opacity:0.7;">Upload Business Card</a></li>
+              <li><a href="#manual" style="opacity:0.7;">Add Contacts Manually</a></li>
+              <li><a href="/logout" style="opacity:0.7;">Log Out Directly</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
 
-    }
 
-    .dropbtn {
-    background-color: rgba(204, 0, 102,1);
-    color: white;
-    width: 300px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    margin-left: 0px;
-    margin-top: 0px;
-}
-    .dropdown {
-    float: left;
-    position: fixed;
-    display: inline-block;
-}
 
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
+  <section class="section section--medium padding-top-0" style="background-color:orange;">
+	<div  class="section section--large container container--large padding-bottom-0" style="padding:15% 0;">
+		<div class="mq-min-600-spanthird">
+			<div  class="media__body" >
+				<h1 class="f-w700" style="text-align: center;">Maggie is here!</h1>
+				<h3>Maggie helps you with your business cards, read, write, add contacts and find them whenever you need!</h3>
+			</div>
+		</div>
+	</div>
+</section>
 
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-    background-color: rgba(204, 0, 102, .8);
-}
-</style>
-
-<div class="dropdown">
-    <button class="dropbtn">Choose an Option</button>
-    <div class="dropdown-content">
-        <a href="#search">Search Contact</a>
-        <a href="#scanner">Save Contact Using Scanner</a>
-        <a href="#manual">Save Contact Manually</a>
-        <a href="/logout">Logout</a>
+<section id="search" class="section section--medium padding-top-0" style="background-color:lightblue;">
+<div  class="section section--large container container--large padding-bottom-0" style="padding:15% 0;">
+  <div class="mq-min-600-spanthird">
+    <div class="media__body" >
+      <h3 class="f-w700" style="text-align: center;">Look for somebody?</h3>
+      <p  style="text-align: center;">Show all my Contacts</p>
+      <form action="/display" method="GET">
+        <button type="submit" class="btn btn-warning btn-lg">All Contacts</button>
+      </form>
     </div>
-   <!--  <h1>Choose an Option</h1> -->
+  </div>
 </div>
+</section>
 
-<div class="container">
-
-      <div class="row">
-
-        <!-- LOCAL INFORMATION -->
-            <h2 id="search">Display all Contacts</h2>
-          <!--  <form>
-            <input type="text" name="search" placeholder="Search..." required>
-            <input type = "button" value="Search">
-
-            </form> -->
-          <!--
-           <div class="search">
-            <form action="" method="get">
-                <input type="text" name="search_text" id="search_text" placeholder=" Search..."/>
-                <input type="button" name="search_button" id="search_button"></a>
-            </form>
-        </div> -->
-           <form action="/display" method="GET">
-
-        
-<button type="submit">All Contacts</button>
-
-
-             </form>
-
-
-     </div>
-        <div class=row>
-                <h2 id="scanner">Save Contact Using Scanner</h2>
-
-                    <p>
-                      <form id="myform" method='POST' enctype='multipart/form-data' action='http://bcr2.intsig.net/BCRService/BCR_VCF2?user=wyf7107@bu.edu&pass=AR34LCMBXL9C4RDN&json=1&lang=524287'>Please specify a JPG file<br>
-                      <input type=file name=upfile size=20><br><br>
-                      <button type=submit>Upload</button>
-                      </form>
-                    </p>
-        </div>
-        <div class="row">
-        <h2 id="manual">Save Contact Manualy</h2>
-              <form action="/store" method="POST">
-
-    
-   
-        <a href ="/store" class="bt">Store Contacts Manually</a>
-           </form>
-
-        </div>
-        <div class="row">
-          <h2>Logout</h2>
-          <form>
-            <a href="/logout" class="bt">Logout</a>
-          </form>
-        </div>
+<section id="scanner" class="section section--medium padding-top-0" style="background-color:purple;">
+<div  class="section section--large container container--large padding-bottom-0" style="padding:15% 0;">
+  <div class="mq-min-600-spanthird">
+    <div class="media__body" >
+      <h3 class="f-w700" style="text-align: center;">Have a card in hand?</h3>
+      <p  style="text-align: center;">Read Card Automatically</p>
+      <form id="myform" method='POST' enctype='multipart/form-data' action='http://bcr2.intsig.net/BCRService/BCR_VCF2?user=wyf7107@bu.edu&pass=AR34LCMBXL9C4RDN&json=1&lang=524287'>Please specify a JPG file<br>
+        <input id="inputfile" type=file name=upfile size=20><br><br>
+        <button type=submit class="btn btn-warning btn-lg">Upload</button>
+      </form>
+    </div>
+  </div>
 </div>
+</section>
+
+<section id="manual" class="section section--medium padding-top-0" style="background-color:lightgreen;">
+<div  class="section section--large container container--large padding-bottom-0" style="padding:15% 0;">
+  <div class="mq-min-600-spanthird">
+    <div class="media__body" >
+      <h3 class="f-w700" style="text-align: center;">Have your Contacts Info BUT No Cards?</h3>
+      <p  style="text-align: center;">Manually Add the Contact</p>
+      <form action="/store" method="GET">
+        <button type="submit" class="btn btn-warning btn-lg">Add Contact</button>
+      </form>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section section--medium padding-top-0" style="background-color:lightblack;">
+<div  class="section section--large container container--large padding-bottom-0" style="padding:15% 0;">
+  <div class="mq-min-600-spanthird">
+    <div class="media__body" >
+      <h3 class="f-w700" style="text-align: center;">See you soon</h3>
+      <p style="text-align: center;">Log Out</p>
+      <form action='/logout' method="GET">
+        <button type="submit" class="btn btn-warning btn-lg">Log out</button>
+      </form>
+    </div>
+  </div>
+</div>
+</section>
+
 </body>
 </html>
